@@ -51,7 +51,7 @@ const showProducts = (products) => {
 						<hr>
 						<div class="d-flex justify-content-center align-items-center gap-2">
 							<a onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn  btn-primary"><i class="fas fa-cart-plus pe-2"></i>ADD TO CART</a>
-							<a onclick="getSpecificProduct(${product.id})" id="details-btn" class="btn btn-warning"><i class="fas fa-info-circle text-white pe-2"></i>DETAILS</a>
+							<a onclick="getSpecificProduct(${product.id})" href="#specific-section" id="details-btn" class="btn btn-warning"><i class="fas fa-info-circle text-white pe-2"></i>DETAILS</a>
 						</div>
 					</div>
 			</div>`;
@@ -193,7 +193,7 @@ const buyProduct = () => {
 	const message = {};
 	// console.log(productQuantity);
 	if (productQuantity > 0) {
-		message.title = 'Hurrah!';
+		message.title = 'Congratulations!';
 		message.type = 'success';
 		alertModal.appendChild(alertHTML(message));
 		clearCart();
