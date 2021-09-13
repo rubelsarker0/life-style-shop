@@ -1,4 +1,7 @@
+/* Google font  */
 @import url('https://fonts.googleapis.com/css2?family=Spectral&display=swap');
+
+/* generic style  */
 
 * {
 	box-sizing: border-box;
@@ -6,9 +9,11 @@
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	overflow-x: hidden;
 }
+
 .search-field {
 	border: none;
 	border-radius: 50px;
@@ -30,10 +35,12 @@ body {
 	padding: 10px;
 	transition: 0.6s;
 }
+
 .single-product:hover {
 	box-shadow: 4px 4px 7px gray;
 	border-radius: 10px;
 }
+
 .product-image {
 	display: block;
 	padding-top: 10px;
@@ -43,15 +50,16 @@ body {
 	margin-right: auto;
 	width: 50%;
 }
+
 .cart {
 	width: 350px;
-	/* border: 1px solid green; */
 	padding: 10px;
 	box-shadow: 10px 10px 20px gray;
 	border-radius: 5px;
 	margin-right: 30px;
 	position: fixed;
 }
+
 .cart-main {
 	padding-right: 30px;
 }
@@ -79,7 +87,6 @@ body {
 	}
 	.cart {
 		width: 300px;
-		/* border: 1px solid green; */
 		padding: 10px;
 		box-shadow: 10px 10px 20px gray;
 		border-radius: 5px;
