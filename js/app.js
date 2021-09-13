@@ -14,21 +14,39 @@ const showProducts = (products) => {
 		const div = document.createElement('div');
 		div.classList.add('product');
 		div.innerHTML = `
-					<div class="card border-warning border-bottom border-3 border-0 single-product">
-							<img src="${image}" class="product-image card-img-top" alt="...">
-							<div class="card-body">
-								<h5 class="card-title text-black">${product.title}</h5>
-								<p class="card-text"><strong>Category:</strong><span class="fs-5"> ${product.category}</span></p>
-								<p class="card-text"><strong>Price:</strong><span class="fs-5"> $${product.price}</span></p>
-								<p class="card-text"><strong>Rating:</strong><span class="fs-5"> ${product.rating.rate}</span></p>
-								<p class="card-text"><strong>Participate:</strong><span class="fs-5"> ${product.rating.count}</span></p>
-								<hr>
-								<div class="d-flex justify-content-center align-items-center  gap-2">
-									<a onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn  btn-primary"><i class="fas fa-cart-plus"></i> ADD TO CART</a>
-									<a onclick="getSpecificProduct(${product.id})" id="details-btn" class="btn btn-warning"><i class="fas fa-info-circle text-white"></i> DETAILS</a>
-								</div>
-							</div>
-					</div>`;
+			<div class="card border-warning border-bottom border-3 border-0 single-product">
+				<img src="${image}" class="product-image card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title text-black fw-bold">${product.title.slice(0, 25)}</h5>
+						<p class="card-text"><strong>Category:</strong><span class="fs-5"> ${
+							product.category
+						}</span></p>
+						<p class="card-text"><strong>Price:</strong><span class="fs-5"> $${
+							product.price
+						}</span></p>
+						<p class="card-text">
+						<i class="fas fa-star text-warning"></i>
+						<i class="fas fa-star text-warning"></i>
+						<i class="fas fa-star text-warning"></i>
+						<i class="fas fa-star text-warning"></i>
+						<i class="fas fa-star text-warning"></i>
+						<i class="far fa-star text-warning"></i>
+						<span class="rating-rate"> ${product.rating.rate}</span>
+						</p>
+						<p class="pt-2"><i class="fas fa-users fa-lg me-2"></i>${
+							product.rating.count
+						} global ratings</p>
+						<hr>
+						<div class="d-flex justify-content-center align-items-center  gap-2">
+							<a onclick="addToCart(${product.id},${
+			product.price
+		})" id="addToCart-btn" class="btn  btn-primary"><i class="fas fa-cart-plus"></i> ADD TO CART</a>
+							<a onclick="getSpecificProduct(${
+								product.id
+							})" id="details-btn" class="btn btn-warning"><i class="fas fa-info-circle text-white"></i> DETAILS</a>
+						</div>
+					</div>
+			</div>`;
 		document.getElementById('all-products').appendChild(div);
 	}
 };
@@ -60,23 +78,34 @@ const displaySpecificProduct = (product) => {
 
 //Generate Specific Product Html function
 const generateSpecificProductHtml = (product) => {
+	console.log(product);
 	return `
 			<div class="row g-0">
 				<div class="col-md-4">
 					<img src="${product.image}" class="img-fluid rounded-start" alt="product-image" style="
-					padding: 50px; width: 300px; height: 300px">
+					padding: 30px; width: 300px; height: 300px">
+					<p class="card-text pb-1 card-padding">
+					<i class="fas fa-star text-warning"></i>
+					<i class="fas fa-star text-warning"></i>
+					<i class="fas fa-star text-warning"></i>
+					<i class="fas fa-star text-warning"></i>
+					<i class="fas fa-star text-warning"></i>
+					<i class="far fa-star text-warning"></i>
+					<span class="rating-rate"> ${product.rating.rate}</span>
+					</p>
+					<p class="card-padding"><i class="fas fa-users fa-lg me-2"></i>${product.rating.count} global ratings</p>
 				</div>
 				<div class="col-md-8">
 					<div class="card-body" style="padding: 4rem 2rem;">
-						<h4 class="card-title">${product.title}</h4>
+						<h4 class="card-title fw-bold">${product.title}</h4>
+						<p class="product-description">${product.description}</p>
 						<ul class="fs-5">
 							<li>Category: ${product.category}</li>
 							<li>Price: $${product.price}</li>
-							<li>Rating: ${product.rating.rate}</li>
-							<li>Participate: ${product.rating.count}</li>
 						</ul>
 						<div class="gap-3">
 						<a onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn btn-primary"><i class="fas fa-cart-plus"></i> ADD TO CART</a>
+						<a onclick="" id="details-btn" class="btn btn-warning"><i class="fas fa-info-circle text-white"></i>CLEAR</a>
 						</div>
 					</div>
 				</div>
@@ -138,3 +167,21 @@ const updateTotal = () => {
 };
 
 updateTotal();
+
+// J.N. Erfan11:06 AM
+// Assignment 7 Requirement
+
+// Card 1st Row 3 item Fix  //Done
+// Card Image Fix //Done
+// Cart Add Dollar Sine Remove add cart icon //Done
+// Total Balance Update  //Done
+// Price .3 Airokom Sasher Money Add Fix  //Done
+
+// Buy Now Button Optional Any Update // Done
+// Search input search result fix optianal  //Done
+
+// Card Shop Rating add and total gor rating // Done
+// Search Input digine Update fix //Done
+// Web Site Name Chainge // Done
+// Web site color change and card color change //Done Something Modify
+// Details a click
