@@ -240,7 +240,7 @@ const alertHTML = (alertMessage) => {
  				${
 					type === 'success'
 						? 'Congratulations! Successfully placed your order!'
-						: 'Sorry! You Have No Items In Cart! Please Add item to the cart.'
+						: 'Sorry! No Items! Please Add item to the cart.'
 				}
             </div>
             </div>
