@@ -36,8 +36,8 @@ const showProducts = (products) => {
 				<img src="${image}" class="product-image card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title text-black fw-bold">${product.title}</h5>
+						<p class="card-text fs-4">Price:<span class="fs-4"> $${product.price}</span></p>
 						<p class="card-text"><strong>Category:</strong><span class="fs-5"> ${product.category}</span></p>
-						<p class="card-text"><strong>Price:</strong><span class="fs-5"> $${product.price}</span></p>
 						<p class="card-text">
 						<i class="fas fa-star text-warning"></i>
 						<i class="fas fa-star text-warning"></i>
