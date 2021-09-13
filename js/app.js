@@ -185,13 +185,12 @@ const clearSpecificProduct = () => {
 	specificProduct.innerHTML = '';
 };
 
-// handle modal alert
+//Modal handle alert function
 const buyProduct = () => {
 	const alertModal = document.getElementById('alertModal');
 	alertModal.textContent = '';
 	const productQuantity = getInputValue('total-Products');
 	const message = {};
-	// console.log(productQuantity);
 	if (productQuantity > 0) {
 		message.title = 'Congratulations!';
 		message.type = 'success';
@@ -204,6 +203,7 @@ const buyProduct = () => {
 	}
 };
 
+// clear cart function
 const clearCart = () => {
 	setInnerText('total-Products', 0, false);
 	setInnerText('price', 0, false);
@@ -212,6 +212,7 @@ const clearCart = () => {
 	setInnerText('total', 0, false);
 };
 
+// Buy model html function
 const alertHTML = (alertMessage) => {
 	const { title, type } = alertMessage;
 	const div = document.createElement('div');
