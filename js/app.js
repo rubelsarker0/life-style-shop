@@ -1,8 +1,25 @@
-const loadProducts = () => {
-	const url = `https://fakestoreapi.com/products`;
-	fetch(url)
-		.then((response) => response.json())
-		.then((data) => showProducts(data));
+// show and hide spinner functions
+const showSpinner = () => {
+	const spinner = document.getElementById('spinner');
+	spinner.classList.remove('d-none');
+};
+
+const hideSpinner = () => {
+	const spinner = document.getElementById('spinner');
+	spinner.classList.add('d-none');
+};
+
+const loadProducts = async () => {
+	try {
+		showSpinner();
+		const url = `https://fakestoreapi.com/products`;
+		const response = await fetch(url);
+		const data = await response.json();
+		showProducts(data);
+		hideSpinner();
+	} catch (error) {
+		console.log(error);
+	}
 };
 loadProducts();
 
@@ -54,11 +71,13 @@ const showProducts = (products) => {
 // Calling Specific Product product end-point function
 const getSpecificProduct = async (productId) => {
 	try {
+		showSpinner();
 		const url = `https://fakestoreapi.com/products/${productId}`;
 		const response = await fetch(url);
 		const data = await response.json();
 		console.log(data);
 		displaySpecificProduct(data);
+		hideSpinner();
 	} catch (error) {
 		console.log(error);
 	}
@@ -172,6 +191,7 @@ const clearSpecificProduct = () => {
 	const specificProduct = document.getElementById('display-specific-product');
 	specificProduct.innerHTML = '';
 };
+
 // J.N. Erfan11:06 AM
 // Assignment 7 Requirement
 
