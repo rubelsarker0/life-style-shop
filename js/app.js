@@ -117,7 +117,7 @@ const generateSpecificProductHtml = (product) => {
 				<div class="col-md-8">
 					<div class="card-body" style="padding: 4rem 2rem;">
 						<h4 class="card-title fw-bold">${product.title}</h4>
-						<p class="product-description">${product.description}</p>
+						<p class="product-description text-muted">${product.description}</p>
 						<ul class="fs-5">
 							<li>Category: ${product.category}</li>
 							<li>Price: $${product.price}</li>
@@ -192,20 +192,7 @@ const clearSpecificProduct = () => {
 	specificProduct.innerHTML = '';
 };
 
-// J.N. Erfan11:06 AM
 // Assignment 7 Requirement
-
-// Card 1st Row 3 item Fix  //Done
-// Card Image Fix //Done
-// Cart Add Dollar Sine Remove add cart icon //Done
-// Total Balance Update  //Done
 // Price .3 Airokom Sasher Money Add Fix  //Done
-
 // Buy Now Button Optional Any Update // Done
 // Search input search result fix optianal  //Done
-
-// Card Shop Rating add and total gor rating // Done
-// Search Input digine Update fix //Done
-// Web Site Name Chainge // Done
-// Web site color change and card color change //Done Something Modify
-// Details a click
