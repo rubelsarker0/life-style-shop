@@ -31,7 +31,6 @@ p {
 	text-align: center;
 	width: 100%;
 	margin: auto;
-	align-items: center;
 	justify-content: center;
 }
 
@@ -56,7 +55,6 @@ p {
 	height: 250px !important;
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
 }
 
 .cart {

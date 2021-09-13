@@ -91,11 +91,22 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">BUY NOW</button>
+            <button onclick="buyProduct()" class="btn btn-primary text-center" data-bs-toggle="modal"
+              data-bs-target="#alertBackdrop">BUY NOW</button>
           </div>
         </div>
       </div>
     </div>
+    <!-- Alert Modal -->
+    <section>
+      <!-- Modal -->
+      <div class="modal fade" id="alertBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="alertBackdropLabel" aria-hidden="true">
+        <div id="alertModal" class="modal-dialog modal-dialog-centered">
+
+        </div>
+      </div>
+    </section>
   </main>
   <footer></footer>
 
