@@ -37,13 +37,13 @@ const showProducts = (products) => {
 							product.rating.count
 						} global ratings</p>
 						<hr>
-						<div class="d-flex justify-content-center align-items-center  gap-2">
+						<div class="d-flex justify-content-center align-items-center gap-2">
 							<a onclick="addToCart(${product.id},${
 			product.price
-		})" id="addToCart-btn" class="btn  btn-primary"><i class="fas fa-cart-plus"></i> ADD TO CART</a>
+		})" id="addToCart-btn" class="btn  btn-primary"><i class="fas fa-cart-plus pe-2"></i>ADD TO CART</a>
 							<a onclick="getSpecificProduct(${
 								product.id
-							})" id="details-btn" class="btn btn-warning"><i class="fas fa-info-circle text-white"></i> DETAILS</a>
+							})" id="details-btn" class="btn btn-warning"><i class="fas fa-info-circle text-white pe-2"></i>DETAILS</a>
 						</div>
 					</div>
 			</div>`;
@@ -104,8 +104,8 @@ const generateSpecificProductHtml = (product) => {
 							<li>Price: $${product.price}</li>
 						</ul>
 						<div class="gap-3">
-						<a onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn btn-primary"><i class="fas fa-cart-plus"></i> ADD TO CART</a>
-						<a onclick="" id="details-btn" class="btn btn-warning"><i class="fas fa-info-circle text-white"></i>CLEAR</a>
+						<a onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn btn-primary"><i class="fas fa-cart-plus pe-2"></i>ADD TO CART</a>
+						<a onclick="clearSpecificProduct()" id="clear-btn" class="btn btn-danger text-white"><i class="fas fa-trash-alt pe-2"></i>CLEAR</a>
 						</div>
 					</div>
 				</div>
@@ -168,6 +168,10 @@ const updateTotal = () => {
 
 updateTotal();
 
+const clearSpecificProduct = () => {
+	const specificProduct = document.getElementById('display-specific-product');
+	specificProduct.innerHTML = '';
+};
 // J.N. Erfan11:06 AM
 // Assignment 7 Requirement
 
